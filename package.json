@@ -7,16 +7,20 @@
     "dev": "vite",
     "build": "tsc && vite build --base=/",
     "test": "vitest",
+    "coverage": "vitest run --coverage",
     "lint": "eslint .",
     "preview": "vite preview",
     "prepare": "husky"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.12.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.0",
     "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
@@ -29,6 +33,7 @@
     "eslint-plugin-vitest": "^0.5.4",
     "globals": "^15.9.0",
     "husky": "^9.1.5",
+    "jsdom": "^25.0.0",
     "lint-staged": "^15.2.9",
     "prettier": "3.3.3",
     "typescript": "^5.5.4",
