@@ -1,0 +1,43 @@
+:root {
+  --colors-black-1: #222;
+  --colors-black-2: #444;
+  --colors-white-1: #f5f5f5;
+  --colors-white-2: #e5e5e5;
+
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 20px;
+  --spacing-5: 32px;
+  --spacing-6: 52px;
+  --spacing-7: 84px;
+}
+
+.shell {
+  padding: var(--spacing-3);
+}
+
+body[data-theme='light'] {
+  --colors-typography-primary: var(--colors-black-1);
+  --colors-typography-secondary: var(--colors-white-1);
+  --colors-background-primary: var(--colors-white-1);
+  --colors-background-secondary: var(--colors-black-1);
+  --colors-primary: var(--colors-black-1);
+  --colors-secondary: var(--colors-white-1);
+  --colors-hover-primary: var(--colors-white-2);
+  --colors-hover-secondary: var(--colors-black-2);
+  --colors-border: var(--colors-white-2);
+}
+
+body[data-theme='dark'] {
+  --colors-typography-primary: var(--colors-white-1);
+  --colors-typography-secondary: var(--colors-black-1);
+  --colors-background-primary: var(--colors-black-1);
+  --colors-background-secondary: var(--colors-white-1);
+  --colors-primary: var(--colors-white-1);
+  --colors-secondary: var(--colors-black-1);
+  --colors-hover-primary: var(--colors-black-2);
+  --colors-hover-secondary: var(--colors-white-2);
+  --colors-border: var(--colors-black-2);
+}

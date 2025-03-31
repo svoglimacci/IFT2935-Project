@@ -1,0 +1,52 @@
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* THEME */
+body {
+  color: var(--colors-typography-primary);
+  background-color: var(--colors-background-primary);
+  font-family: 'Geist', sans-serif;
+}
+
+a {
+  color: VAR(--colors-typography-primary);
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
