@@ -1,13 +1,13 @@
 import React, { JSX, ReactNode } from 'react';
-import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
-import './Shell.module.css';
+import classes from './Shell.module.css';
+import Header from '../Header/Header';
 export type ShellProps = {
   children?: ReactNode;
 };
 const Shell = ({ children }: ShellProps): JSX.Element => {
   return (
-    <div>
-      <ThemeSwitcher />
+    <div className={classes.shell}>
+      <Header />
       {children}
     </div>
   );

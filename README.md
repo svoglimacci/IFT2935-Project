@@ -1,50 +1,62 @@
-# React + TypeScript + Vite
+# IFT2935 - Projet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projet crée dans le cadre du cours de Base de donnée (IFT2935) @ UdeM.
 
-Currently, two official plugins are available:
+## Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Make sure you have the following installed:
 
-## Expanding the ESLint configuration
+- Node.js (https://nodejs.org/)
+- PostgreSQL driver (https://www.postgresql.org/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Clone this repository to your local machine using the following command:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
+```bash
+git clone https://github.com/svoglimacci/IFT2935-Project.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Getting Started - Backend
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react';
+1. Install dependencies by running:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-});
-```
+   ```bash
+   cd IFT2935-Project/server
+   npm install
+   ```
+
+2. Generate datas by running:
+
+   ```bash
+   npm run seed
+   ```
+
+3. Run the server:
+
+   ```bash
+   npm start
+   ```
+
+The server will start running on `http://localhost:8080`.
+
+## API Endpoints
+
+The server exposes the following API endpoints:
+
+- `GET /api/users`: Get all users.
+
+## Getting Started - Frontend
+
+1. Install dependencies by running:
+
+   ```bash
+   cd IFT2935-Project
+   pnpm install
+   ```
+
+2. Run the app:
+
+   ```bash
+   pnpm run dev
+   ```
+
+The application will start running on `http://localhost:3000

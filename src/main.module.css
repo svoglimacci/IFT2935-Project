@@ -39,4 +39,14 @@ h6 {
 body {
   color: var(--colors-typography-primary);
   background-color: var(--colors-background-primary);
+  font-family: 'Geist', sans-serif;
+}
+
+a {
+  color: VAR(--colors-typography-primary);
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
 }

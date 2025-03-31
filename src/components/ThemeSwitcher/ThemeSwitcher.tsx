@@ -11,6 +11,7 @@ const ThemeSwitcher = (): JSX.Element => {
   return (
     <div>
       <Button
+        variant="icon"
         onClick={toggleTheme}
         icon={theme === THEME.LIGHT ? <IconSunFilled /> : <IconMoon />}
       />

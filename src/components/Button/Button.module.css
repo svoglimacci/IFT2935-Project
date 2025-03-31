@@ -1,10 +1,44 @@
 .button {
+  font-family: 'Geist', sans-serif;
+  font-size: 16px;
   background-color: var(--colors-background);
-  border: none;
   color: var(--colors-primary);
-  padding: 15px 32px;
+  padding: var(--spacing-2) var(--spacing-3);
   text-align: center;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+
+.primary {
+  background-color: var(--colors-primary);
+  color: var(--colors-background-primary);
+  &:hover {
+    background-color: var(--colors-hover-secondary);
+  }
+}
+
+.secondary {
+  background-color: var(--colors-secondary);
+  color: var(--colors-background-secondary);
+  border: 1px solid var(--colors-border);
+  &:hover {
+    background-color: var(--colors-hover-primary);
+  }
+}
+
+.text {
+  background-color: transparent;
+  color: var(--colors-primary);
+  &:hover {
+    background-color: var(--colors-hover-primary);
+  }
+}
+
+.icon {
+  &:hover {
+    background-color: var(--colors-hover-primary);
+  }
 }
