@@ -6,6 +6,7 @@ export type ButtonProps = {
   onClick?: () => void;
   icon?: JSX.Element;
   variant?: 'icon' | 'text' | 'primary' | 'secondary';
+  isActive?: boolean;
 };
 
 const Button = ({
@@ -13,11 +14,14 @@ const Button = ({
   onClick,
   icon,
   variant,
+  isActive,
 }: ButtonProps): JSX.Element => {
   return (
     <button
       onClick={onClick}
-      className={`${classes.button} ${classes[variant || 'primary']}`}
+      className={`${classes.button} ${classes[variant || 'primary']} ${
+        isActive ? classes.active : ''
+      }`}
     >
       {icon}
       {children}
