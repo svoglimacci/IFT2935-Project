@@ -7,9 +7,3 @@
   border-bottom: 1px solid var(--colors-border);
   margin-bottom: var(--spacing-4);
 }
-
-.navList {
-  display: flex;
-  flex-direction: row;
-  gap: var(--spacing-3);
-}

@@ -12,7 +12,7 @@
   border-radius: 6px;
 }
 
-.primary {
+.secondary {
   background-color: var(--colors-primary);
   color: var(--colors-background-primary);
   &:hover {
@@ -20,7 +20,7 @@
   }
 }
 
-.secondary {
+.primary {
   background-color: var(--colors-secondary);
   color: var(--colors-background-secondary);
   border: 1px solid var(--colors-border);
@@ -40,5 +40,14 @@
 .icon {
   &:hover {
     background-color: var(--colors-hover-primary);
+  }
+}
+
+.active {
+  background-color: var(--colors-primary);
+  border: none;
+  color: var(--colors-background-primary);
+  &:hover {
+    background-color: var(--colors-hover-secondary);
   }
 }
