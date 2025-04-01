@@ -6,7 +6,7 @@ export type ButtonProps = {
   onClick?: () => void;
   icon?: JSX.Element;
   variant?: 'icon' | 'text' | 'primary' | 'secondary';
-  isActive?: boolean; // New prop
+  isActive?: boolean;
 };
 
 const Button = ({

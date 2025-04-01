@@ -10,42 +10,37 @@ export type HomeProps = {
 //God awful, but it works lmao
 const Home = () => {
   const [url, setUrl] = useState<string | null>(null);
-  const [activeButton, setActiveButton] = useState<number | null>(null); // Track active button
-
-  const { data: data } = useFetch<{
-    id: number;
-    name: string;
-    lastname: string;
-  }>(url || '');
+  const [activeButton, setActiveButton] = useState<number | null>(null);
+  const { data: data } = useFetch(url || '');
 
   const handleClick = (url: string, buttonIndex: number) => {
     setUrl(url);
-    setActiveButton(buttonIndex); // Set the active button
+    setActiveButton(buttonIndex);
   };
 
   return (
     <div>
       <div className={classes.buttonContainer}>
         <Button
-          onClick={() => handleClick('http://localhost:8080/api/users/1', 1)}
+          onClick={() => handleClick('http://localhost:8080/api/members/1', 1)}
           isActive={activeButton === 1}
         >
           Question 1
         </Button>
         <Button
-          onClick={() => handleClick('http://localhost:8080/api/users/2', 2)}
+          onClick={() => handleClick('http://localhost:8080/api/books', 2)}
           isActive={activeButton === 2}
         >
           Question 2
         </Button>
         <Button
-          onClick={() => handleClick('http://localhost:8080/api/users/3', 3)}
+          onClick={() => handleClick('http://localhost:8080/api/loans', 3)}
           isActive={activeButton === 3}
         >
           Question 3
         </Button>
         <Button
-          onClick={() => handleClick('http://localhost:8080/api/users/4', 4)}
+          onClick={() => handleClick('http://localhost:8080/api/orders', 4)}
           isActive={activeButton === 4}
         >
           Question 4
@@ -53,7 +48,9 @@ const Home = () => {
       </div>
       <div className={classes.dataContainer}>
         {data && (
-          <div className={classes.dataContainer}>{JSON.stringify(data)}</div>
+          <div>
+            <pre>{JSON.stringify(data, null, 2)}</pre>
+          </div>
         )}
       </div>
     </div>
