@@ -24,13 +24,22 @@ git clone https://github.com/svoglimacci/IFT2935-Project.git
    npm install
    ```
 
-2. Generate datas by running:
+2. Create a database by running:
+
+```bash
+ psql -U %USERNAME%
+ CREATE DATABASE %DATABASE_NAME%;
+```
+
+3. set your db config values in the `db.js` file.
+
+4. Generate datas by running:
 
    ```bash
    npm run seed
    ```
 
-3. Run the server:
+5. Run the server:
 
    ```bash
    npm start
@@ -59,4 +68,4 @@ The server exposes the following API endpoints:
    pnpm run dev
    ```
 
-The application will start running on `http://localhost:3000
+The application will start running on `http://localhost:3000`.
