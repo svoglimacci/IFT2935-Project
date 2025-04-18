@@ -33,9 +33,14 @@ INSERT INTO Emprunt (id_livre, id_adherent, date_emprunt, date_retour, statut) V
 (5, 1, '2025-04-11', NULL, 'en cours'),
 (6, 1, '2025-04-12', NULL, 'en cours'),
 (2, 3, '2025-01-10', NULL, 'en retard'),
-(4, 4, '2025-04-05', '2025-04-15', 'honoré'),
+(10,3, '2024-10-10', NULL, 'en retard'),
+(4, 4, '2025-04-05', '2025-04-15', 'honorée'),
+(4, 4, '2024-04-05', '2024-04-15', 'honorée'),
+(4, 8, '2024-03-05', '2024-03-15', 'honorée'),
+(4, 9, '2023-03-05', '2023-03-15', 'honorée'),
 (7, 5, '2025-04-14', NULL, 'en cours'),
 (3, 5, '2025-04-14', NULL, 'en cours'),
+(3, 7, '2025-01-14', NULL, 'en retard'),
 (8, 6, '2025-04-15', NULL, 'en cours'),
 (9, 7, '2025-04-16', NULL, 'en cours'),
 (10, 8, '2025-04-17', NULL, 'en cours'),
@@ -53,7 +58,7 @@ INSERT INTO Commande (id_commande, id_adherent, statut, date_commande) VALUES
 (9, 5, 'annulée', '2025-04-18'),
 (10, 6, 'annulée', '2025-04-19'),
 (11, 1, 'annulée', '2024-04-20'),
-(12, 6, 'annulée', '20024-03-01');
+(12, 6, 'annulée', '2024-03-01');
 
 
 

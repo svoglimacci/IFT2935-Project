@@ -24,22 +24,22 @@ CREATE TABLE Adherent
 
 CREATE TABLE Emprunt
 (
+  id_emprunt SERIAL PRIMARY KEY,
   id_livre INT NOT NULL,
   id_adherent INT NOT NULL,
   date_emprunt DATE NOT NULL DEFAULT CURRENT_DATE,
   date_retour DATE,
   statut VARCHAR(50) NOT NULL,
-  PRIMARY KEY (id_livre, id_adherent),
   FOREIGN KEY (id_livre) REFERENCES Livre(id_livre),
   FOREIGN KEY (id_adherent) REFERENCES Adherent(id_adherent)
 );
-
 CREATE TABLE Commande
 (
   id_commande INT PRIMARY KEY,
   id_adherent INT NOT NULL,
   statut VARCHAR(50) NOT NULL,
-  date_commande DATE NOT NULL DEFAULT CURRENT_DATE
+  date_commande DATE NOT NULL DEFAULT CURRENT_DATE,
+  FOREIGN KEY (id_adherent) REFERENCES Adherent(id_adherent)
 );
 
 CREATE TABLE Livre_Commande
