@@ -47,12 +47,6 @@ git clone https://github.com/svoglimacci/IFT2935-Project.git
 
 The server will start running on `http://localhost:8080`.
 
-## API Endpoints
-
-The server exposes the following API endpoints:
-
-- `GET /api/users`: Get all users.
-
 ## Getting Started - Frontend
 
 1. Install dependencies by running:
