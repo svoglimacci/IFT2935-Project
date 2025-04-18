@@ -1,6 +1,5 @@
 import { pool } from './db.js';
-import // read library.sql and execute it
-fs from 'fs';
+import fs from 'fs';
 
 var createTablesQuery = fs.readFileSync('../create.sql').toString();
 var insertDataQuery = fs.readFileSync('../insert.sql').toString();

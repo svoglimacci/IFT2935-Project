@@ -7,15 +7,25 @@ export type HomeProps = {
   children?: JSX.Element | string;
 };
 
+const questions = [
+  'Liste des membres dont les prêts sont en retard, y compris le nombre de jours de retard',
+  "Les 3 livres les plus empruntés avec leur nombre d'emprunts cette année",
+  'Liste de tous les membres qui ont emprunté des livres mais ne les ont pas encore rendus ce mois-ci',
+  'Liste de tous les livres du genre Fantasy qui ont été commandés mais pas encore empruntés',
+  'Liste de tous les membres qui ont emprunté des livres mais ne les ont pas encore rendus ce mois-ci',
+];
+
 //God awful, but it works lmao
 const Home = () => {
   const [url, setUrl] = useState<string | null>(null);
   const [activeButton, setActiveButton] = useState<number | null>(null);
   const { data: data } = useFetch(url || '');
+  const [question, setQuestion] = useState<string | null>(null);
 
   const handleClick = (url: string, buttonIndex: number) => {
     setUrl(url);
     setActiveButton(buttonIndex);
+    setQuestion(questions[buttonIndex - 1]);
   };
 
   return (
@@ -49,6 +59,7 @@ const Home = () => {
       <div className={classes.dataContainer}>
         {data && (
           <div>
+            <h2>{question}</h2>
             <pre>{JSON.stringify(data, null, 2)}</pre>
           </div>
         )}

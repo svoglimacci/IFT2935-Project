@@ -32,7 +32,7 @@ INSERT INTO Adherent (id_adherent, nom, prenom, code_postal, no_rue, rue, ville)
 INSERT INTO Emprunt (id_livre, id_adherent, date_emprunt, date_retour, statut) VALUES
 (5, 1, '2025-04-11', NULL, 'en cours'),
 (6, 1, '2025-04-12', NULL, 'en cours'),
-(2, 3, '2025-04-10', NULL, 'en retard'),
+(2, 3, '2025-01-10', NULL, 'en retard'),
 (4, 4, '2025-04-05', '2025-04-15', 'honoré'),
 (7, 5, '2025-04-14', NULL, 'en cours'),
 (3, 5, '2025-04-14', NULL, 'en cours'),
