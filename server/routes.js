@@ -1,58 +1,44 @@
 import express from 'express';
 import { pool } from './db.js';
+import fs from 'fs';
 
 const router = express.Router();
 
-// Get all books
-router.get('/books', async (req, res) => {
+var q1 = fs.readFileSync('../q1.sql').toString();
+var q2 = fs.readFileSync('../q2.sql').toString();
+var q3 = fs.readFileSync('../q3.sql').toString();
+var q4 = fs.readFileSync('../q4.sql').toString();
+
+router.get('/q1', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM books');
+    const result = await pool.query(q1);
     res.json(result.rows);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
 
-// Get all members
-router.get('/members', async (req, res) => {
+router.get('/q2', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM members');
+    const result = await pool.query(q2);
     res.json(result.rows);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
 
-// Get member by ID
-router.get('/members/:id', async (req, res) => {
-  const { id } = req.params;
+router.get('/q3', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM members WHERE id = $1', [
-      id,
-    ]);
-    if (result.rows.length === 0) {
-      return res.status(404).json({ error: 'Member not found' });
-    }
-    res.json(result.rows[0]);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-});
-
-// Get all loans
-router.get('/loans', async (req, res) => {
-  try {
-    const result = await pool.query('SELECT * FROM loans');
+    const result = await pool.query(q3);
     res.json(result.rows);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
 
-// Get all orders
-router.get('/orders', async (req, res) => {
+router.get('/q4', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM orders');
+    const result = await pool.query(q4);
     res.json(result.rows);
   } catch (error) {
     res.status(500).json({ error: error.message });

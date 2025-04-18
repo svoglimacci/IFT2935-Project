@@ -1,6 +1,7 @@
 import pg from 'pg';
 
 export const pool = new pg.Pool({
+  options: '-c search_path=bibliotheque',
   user: 'postgres',
   host: 'localhost',
   database: 'postgres',
