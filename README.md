@@ -59,7 +59,7 @@ The server will start running on `http://localhost:8080`.
 2. Run the app:
 
    ```bash
-   pnpm run dev
+   npm run dev
    ```
 
 The application will start running on `http://localhost:3000`.
